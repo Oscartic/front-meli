@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import SearchForm from '../components/SearchForm';
+import SearchForm from '../components/search/SearchForm';
 import styles from '../styles/Search.module.scss';
 
 const SearchBox = () => {
