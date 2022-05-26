@@ -1,0 +1,53 @@
+@import 'colors';
+
+.search_container {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $yellow;
+  border-bottom: 1px solid #e5d84f;;
+  display: flex;
+  padding: 1rem;
+  img {
+    max-width: 150px !important;
+  }
+  .search_form {
+    width: 70%;
+    padding: 0 1.5rem;
+    input {
+      border-top: 1px solid #ededed;
+      border-left: 1px solid #ededed;
+      border-bottom: 1px solid #ededed;
+      border-right: 0;
+      border-radius: 0.3rem 0 0 0.3rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      width: 90%;
+      &:focus-visible {
+        background-color: #fefefe;
+        outline-color: #eeeeee;
+      }
+    }
+    button {
+      border: 1px solid #ededed;
+      border-radius: 0 0.3rem 0.3rem 0; 
+      padding: 0.73rem;
+      background-color: white;
+      display: inline-block;
+      transition: 0.4s ease;
+      &:hover {
+        color: white;
+        background-color: $blueLink;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .search_form {
+    input {
+      width: 80% !important;
+    }
+    }
+}
