@@ -20,3 +20,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.spinner {
+  background: rgba(255,255,255,.5);
+  height: 300px;
+  padding: 5rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
