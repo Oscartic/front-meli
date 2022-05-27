@@ -6,6 +6,7 @@ import Spinner from '../ui/Spinner';
 import styles from '../../styles/Items.module.scss';
 import ItemList from './ItemList';
 import AlertError from '../ui/AlertError';
+import Breadcrumb from '../ui/Breadcrumb';
 
 const ItemsList = () => {
 
@@ -13,8 +14,10 @@ const ItemsList = () => {
     const {
         isFetch, 
         error, 
+        categories,
         products,
         search,
+        setCategories,
         setProducts,
         setSearch,
         setIsFetch,
@@ -29,7 +32,7 @@ const ItemsList = () => {
                 const url = `http://localhost:3001/api/v1/items?search=${search}`;
                 console.log(url);
                 const { data } = await axios.get(url);
-                console.log(data);
+                setCategories(data.categories);
                 setProducts(data.items);
             } catch (error) {
                 console.log('[❌][retrieveProducts]', error);
@@ -54,10 +57,10 @@ const ItemsList = () => {
                 error !== '' && 
                 <AlertError error={error} />
             }
-            <h1>{search}</h1>
+            <Breadcrumb categories={categories} />
             <section className={styles.list_container}>
                 { 
-                    products.map(product => <ItemList id={product.id} picture={product.picture} title={product.title} price={product.price} condition={product.condition} free_shipping={product.free_shipping} />)
+                    products.map(product => <ItemList key={product.id} id={product.id} picture={product.picture} title={product.title} price={product.price} condition={product.condition} free_shipping={product.free_shipping} />)
                 }
             </section>
         </>
