@@ -54,7 +54,7 @@ const useProducts = () => {
         products,
         setProducts: products => dispatch({ type: ACTION.GET_PRODUCTS, payload: products }),
         setSearch: search => dispatch({ type: ACTION.SEARCH, payload: search }),
-        setFetch: () => dispatch({ type: ACTION.IS_FETCHING }),
+        setIsFetch: () => dispatch({ type: ACTION.IS_FETCHING }),
         setError: error => dispatch({ type: ACTION.ERROR, payload: error })
     };
 };
