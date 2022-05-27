@@ -1,0 +1,59 @@
+@import 'colors';
+.list_container {
+    .item_list_container:first-child {
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+    .item_list_container:last-child {
+        border-radius: 0 0 0.4rem 0.4rem;
+    }
+}
+.item_list_container {
+    background: white;
+    border-top: 1px solid #ededed;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    max-width: 890px;
+    height: 200px;
+    figure {
+        margin: 0;
+        display: flex;
+        img {
+            max-width: 140px;
+            max-height: 140px;
+            height: 100%;
+            width: 100%;
+        }
+        figcaption {
+            margin-left: 1.5rem;
+            a {
+                color: $black;
+                font-size: 1.25rem;
+                font-weight: 100;
+                margin-bottom: 0.5rem;
+                cursor: pointer;
+            }
+            .price {
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+            .condition {
+                display: block;
+                font-size: 14px;
+                font-weight: 200;
+                margin: 0.3rem;
+            }
+            .free_ship {
+                background-color: #e6f7ee;
+                border-radius: 0.2rem;
+                color: #00a650;
+                display: block;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+                width: 90px;
+            }
+        }
+    }
+}

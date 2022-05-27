@@ -12,6 +12,10 @@ input {
   font-size: 16px;
 }
 
+body {
+  background: #ededed;
+}
+
 a {
   color: $blueLink;
   text-decoration: none;
@@ -29,4 +33,17 @@ a {
   text-align: center;
   width: 100%;
   z-index: 2;
+}
+
+.alert_error {
+  background-color: rgb(255 134 0 / 18%);
+  color: #676767;
+  display: block;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.1rem;
+  border-bottom: 1px solid #e7c7a5;
+  p {
+    margin: 0.3rem;
+  }
 }
