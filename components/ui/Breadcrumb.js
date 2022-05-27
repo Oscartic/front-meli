@@ -2,7 +2,7 @@ const Breadcrumb = ({ categories }) => {
     
     console.log(categories)
     const makeBreadCrumb = () => {
-        if(categories.length <= 0) return "Categoría nueva"
+        if(!categories) return "Categoría nueva"
         return categories.toString().replace(/,/g, " > ");;
     }
 
