@@ -2,6 +2,7 @@ import { useReducer } from "react";
 
 const ACTION = {
     IS_FETCHING: 'IS_FETCHING',
+    GET_CATEGORIES: 'GET_CATEGORIES',
     GET_PRODUCTS: 'GET_PRODUCTS',
     ERROR: 'ERROR',
 }
@@ -19,6 +20,11 @@ const reducer = (state, action) => {
                 ...state,
                 isFetch: false,
                 error: action.payload
+            };
+        case ACTION.GET_CATEGORIES:
+            return {
+                ...state,
+                categories: action.payload
             };
         case ACTION.GET_PRODUCTS:
             return {
@@ -43,15 +49,18 @@ const useProducts = () => {
         error: '',
         search: '',
         products: [],
+        categories: []
     });
 
-    const { isFetch, error, search, products } = state;
+    const { isFetch, error, search, categories, products } = state;
 
     return {
         isFetch, 
         error, 
         search,
         products,
+        categories,
+        setCategories: categories => dispatch({ type: ACTION.GET_CATEGORIES, payload: categories }),
         setProducts: products => dispatch({ type: ACTION.GET_PRODUCTS, payload: products }),
         setSearch: search => dispatch({ type: ACTION.SEARCH, payload: search }),
         setIsFetch: () => dispatch({ type: ACTION.IS_FETCHING }),
