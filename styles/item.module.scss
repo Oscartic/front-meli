@@ -1,0 +1,27 @@
+.item_container {
+    background: white;
+    border-top: 1px solid #ededed;
+    border-radius: 0.4rem;
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+    max-width: 890px;
+    .item_body {
+        flex-grow: 2;
+        img {
+            display: block;
+            margin: auto;
+        }
+        h2 {
+            font-weight: 500;
+        }
+        p {
+            display: block;
+            max-width: 600px;
+            font-weight: 200;
+        }
+    }
+    .item_title {
+        flex-grow: 1;
+    }   
+}
