@@ -1,9 +1,8 @@
+import SearchForm from "../../components/search/SearchForm";
+import Item from "../../components/items/Item";
 import Head from 'next/head';
-import ItemsList from '../components/items/ItemsList';
-import SearchForm from '../components/search/SearchForm';
 
-const Items = () => {
-
+const IdItem = () => {
     return (
         <div>
             <Head>
@@ -13,10 +12,10 @@ const Items = () => {
             </Head>
             <section>
                 <SearchForm />
-                <ItemsList />
+                <Item />
             </section>
         </div>
     );
 }
-
-export default Items;
+ 
+export default IdItem;

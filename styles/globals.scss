@@ -27,10 +27,12 @@ a {
 
 .spinner {
   background: rgba(255,255,255,.5);
-  height: 300px;
+  justify-content: center;
+  min-height: 100vh;
   padding: 5rem;
   position: absolute;
   text-align: center;
+  display: flex;
   width: 100%;
   z-index: 2;
 }

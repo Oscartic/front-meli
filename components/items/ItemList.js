@@ -1,9 +1,12 @@
+import { useRouter } from 'next/router';
 import styles from '../../styles/Items.module.scss';
 
 const ItemList = ({ id, picture, title, price, condition, free_shipping }) => {
 
-    const launchProduct = () => {
-        console.log(id)
+    const router = useRouter(); 
+
+    const launchProduct = () => {    
+        router.push(`/items/${id}`);
     }
 
     return (

@@ -1,0 +1,51 @@
+.item_container {
+    background: white;
+    border-top: 1px solid #ededed;
+    border-radius: 0.4rem;
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+    max-width: 890px;
+    .item_body {
+        flex-grow: 2;
+        img {
+            display: block;
+            margin: auto;
+        }
+        h2 {
+            font-weight: 500;
+        }
+        p {
+            display: block;
+            font-weight: 200;
+            hyphens:auto;
+            max-width: 600px;
+            word-wrap:break-word;
+        }
+    }
+    .item_title {
+        flex-grow: 1;
+        .condition_sold {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            span {
+                border: 1px solid #9c9c9c;
+                border-radius: 0.2rem;
+                color: #9c9c9c;
+                display: block;
+                font-size: 0.8rem;
+                padding: 0 0.5rem;
+            }
+        }
+        .title {
+            font-size: 1.4rem;
+            font-weight: 100;
+            margin-bottom: 0.4rem;
+        }
+        .amount {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }   
+}

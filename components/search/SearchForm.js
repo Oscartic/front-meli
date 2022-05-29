@@ -14,7 +14,15 @@ const SearchForm = () => {
 
     const sendSearch = (e) => {
         e.preventDefault();
-        router.push(`/items?query=${search}`);
+        const isId = search.substring(0,3);
+        if(isId === 'MLA') {
+            router.push(`/items/${search}`);
+        } else {
+            router.push(`/items?query=${search}`);
+        }
+
+        setSearch('');
+        
     }
 
     return (
