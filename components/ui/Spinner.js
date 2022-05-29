@@ -1,9 +1,9 @@
-import { SpinnerRoundFilled } from 'spinners-react';
+import { SpinnerRoundOutlined } from 'spinners-react';
 
 const Spinner = () => {
     return (
         <div className='spinner'>
-            <SpinnerRoundFilled size={60} thickness={100} speed={100} color="rgba(93, 172, 57, 1)" />
+            <SpinnerRoundOutlined size={50} thickness={1} speed={120} color="rgba(93, 172, 57, 1)" />
         </div>   
     );
 }
