@@ -4,7 +4,8 @@ import BreadCrumb from '../ui/Breadcrumb';
 import styles from '../../styles/item.module.scss';
 import axios from 'axios';
 import useProduct from '../../hooks/useProduct';
-import Image from 'next/image';
+import Spinner from '../ui/Spinner';
+import AlertError from '../ui/AlertError';
 
 const Item = () => {
     
@@ -13,7 +14,7 @@ const Item = () => {
 
     useEffect(() => {
         const retrieveProduct = async (idItem) => {
-
+            setIsFetch();
             try {
                 const url = `http://localhost:3001/api/v1/items/${idItem}`;
                 const { data } = await axios.get(url);
@@ -21,7 +22,7 @@ const Item = () => {
                 setProduct(data);
             } catch (error) {
                 console.log('[❌][retrieveProduct]', error);
-                // return setError(error.message);
+                return setError(error.message);
             }
         }
         if(!router.isReady) return;
@@ -32,26 +33,37 @@ const Item = () => {
     
     }, [router.query])
     
-    console.log(product)
-
     return (
         <>
-        <BreadCrumb />
-        <section className={styles.item_container}>
-            <div className={styles.item_body}>
-                <img src={product.picture} />
-                <h2>Descripción del producto</h2>
-                <p>{product.description}</p>
-            </div>
-            <div className={styles.item_title}>
-                <div>
-                    <span>{product.condition == 'new' ? 'Nuevo' : 'Usado'}</span>
-                    <span>{product.sold_quantity} vendidos</span>
-                </div>
-                <h1>{product.title}</h1>
-                <span>${product.price.amount}</span>
-            </div>
-        </section>
+            {
+                isFetch && 
+                <Spinner />
+            }
+            {
+                error !== '' && 
+                <AlertError error={error} />
+            }
+            {
+                Object.keys(product).length !== 0  && 
+                    <>
+                        <BreadCrumb categories={product.categories}/>
+                        <section className={styles.item_container}>
+                            <div className={styles.item_body}>
+                                <img src={product.picture} />
+                                <h2>Descripción del producto</h2>
+                                <p>{product.description}</p>
+                            </div>
+                            <div className={styles.item_title}>
+                                <div className={styles.condition_sold}>
+                                    <span>{product.condition == 'new' ? 'Nuevo' : 'Usado'}</span>
+                                    <span>{product.sold_quantity} vendidos</span>
+                                </div>
+                                <h1 className={styles.title}>{product.title}</h1>
+                                <span className={styles.amount}>$ {product.price?.amount.toLocaleString("es-CL")}</span>
+                            </div>
+                        </section>
+                    </>
+            }
         </>
     );
 }
