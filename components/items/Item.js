@@ -16,7 +16,7 @@ const Item = () => {
         const retrieveProduct = async (idItem) => {
             setIsFetch();
             try {
-                const url = `http://localhost:3001/api/v1/items/${idItem}`;
+                const url = `${process.env.API_MELI_URL}/items/${idItem}`;
                 const { data } = await axios.get(url);
                 console.log(data)
                 setProduct(data);

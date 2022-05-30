@@ -29,7 +29,7 @@ const ItemsList = () => {
         const retrieveProducts = async (search) => {
             setIsFetch();
             try {
-                const url = `http://localhost:3001/api/v1/items?search=${search}`;
+                const url = `${process.env.API_MELI_URL}/items?search=${search}`;
                 console.log(url);
                 const { data } = await axios.get(url);
                 setCategories(data.categories);
