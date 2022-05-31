@@ -1,16 +1,18 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import BreadCrumb from '../ui/Breadcrumb';
-import styles from '../../styles/item.module.scss';
+import styles from '../../styles/Item.module.scss';
 import axios from 'axios';
 import useProduct from '../../hooks/useProduct';
 import Spinner from '../ui/Spinner';
 import AlertError from '../ui/AlertError';
+import Image from 'next/image';
+import NotFound from '../../public/product-not-found.jpg';
 
 const Item = () => {
     
     const router = useRouter();
-    const { isFetch, error, product, setProduct, setIsFetch, setError } = useProduct();
+    const { id, isFetch, error, product, setId, setProduct, setIsFetch, setError } = useProduct();
 
     useEffect(() => {
         const retrieveProduct = async (idItem) => {
@@ -18,16 +20,18 @@ const Item = () => {
             try {
                 const url = `${process.env.API_MELI_URL}/items/${idItem}`;
                 const { data } = await axios.get(url);
-                console.log(data)
+                console.log('desde data', data)
                 setProduct(data);
             } catch (error) {
                 console.log('[❌][retrieveProduct]', error);
+
                 return setError(error.message);
             }
         }
         if(!router.isReady) return;
 
         const { idItem } = router.query;
+        setId(idItem);
         retrieveProduct(idItem);
 
     
@@ -42,6 +46,14 @@ const Item = () => {
             {
                 error !== '' && 
                 <AlertError error={error} />
+            }
+            {
+                error && Object.keys(product).length === 0 &&
+                <section className={styles.item_not_found}>
+                    <Image src={NotFound} width={200} height={200} />
+                    <p><strong>¡El producto con id {id} no se ha encontrado!</strong><br />
+                    Por favor verifique el valor ingresado o pruebe realizar otra busqueda.</p>
+                </section>
             }
             {
                 Object.keys(product).length !== 0  && 
