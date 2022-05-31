@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import BreadCrumb from '../ui/Breadcrumb';
-import styles from '../../styles/Item.module.scss';
 import axios from 'axios';
+import styles from '../../styles/Item.module.scss';
 import useProduct from '../../hooks/useProduct';
 import Spinner from '../ui/Spinner';
 import AlertError from '../ui/AlertError';
