@@ -23,6 +23,7 @@ const reducer = (state, action) => {
         case ACTION.ERROR:
             return {
                 ...state,
+                product: {},
                 isFetch: false,
                 error: action.payload
             };

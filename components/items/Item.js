@@ -20,7 +20,6 @@ const Item = () => {
             try {
                 const url = `${process.env.API_MELI_URL}/items/${idItem}`;
                 const { data } = await axios.get(url);
-                console.log('desde data', data)
                 setProduct(data);
             } catch (error) {
                 console.log('[❌][retrieveProduct]', error);
