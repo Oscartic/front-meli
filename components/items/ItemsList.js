@@ -57,6 +57,7 @@ const ItemsList = () => {
                 error !== '' && 
                 <AlertError error={error} />
             }
+            <h1 className={styles.search_title}>{search}</h1>
             <Breadcrumb categories={categories} />
             <section className={styles.list_container}>
                 { 
