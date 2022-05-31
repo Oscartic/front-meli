@@ -1,9 +1,22 @@
 @import 'colors';
+.search_title {
+    display: block;
+    margin: auto;
+    max-width: 890px;
+    word-wrap: break-word;
+    color: #333;
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
 .list_container {
-    .item_list_container:first-child {
+    section.item_list_container:first-child {
         border-radius: 0.4rem 0.4rem 0 0;
     }
-    .item_list_container:last-child {
+    section.item_list_container:last-child {
         border-radius: 0 0 0.4rem 0.4rem;
     }
 }

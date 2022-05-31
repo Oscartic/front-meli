@@ -10,7 +10,8 @@
   display: flex;
   padding: 1rem;
   img {
-    max-width: 150px !important;
+    cursor: pointer;
+    max-width: 130px !important;
   }
   .search_form {
     width: 70%;
@@ -32,9 +33,10 @@
     button {
       border: 1px solid #ededed;
       border-radius: 0 0.3rem 0.3rem 0; 
-      padding: 0.73rem;
       background-color: white;
       display: inline-block;
+      margin: 0;
+      padding: 0.73rem;
       transition: 0.4s ease;
       &:hover {
         color: white;
@@ -49,5 +51,10 @@
     input {
       width: 80% !important;
     }
+  }
+  .search_container {
+    img {
+      max-width: 100px !important;
+      }  
     }
-}
+  }

@@ -9,7 +9,7 @@ input {
   margin: 0;
   color: $black;
   font-family: proxima-nova, Helvetica Neue, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
@@ -23,10 +23,12 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .spinner {
-  background: rgba(255,255,255,.5);
+  background: rgba(0,0,0,.5);
   justify-content: center;
   min-height: 100vh;
   padding: 5rem;
