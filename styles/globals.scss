@@ -58,6 +58,12 @@ a {
   font-size: 0.9rem;
   margin: auto;
   max-width: 890px;
-  padding: 1rem;
+  padding: 0.8rem 0;
   width: 98%;
+}
+
+@media (max-width: 740px) {
+  .breadcrumb {
+      padding-left: 1rem;
+  }
 }

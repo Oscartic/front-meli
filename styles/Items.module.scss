@@ -1,16 +1,14 @@
 @import 'colors';
 .search_title {
-    display: block;
-    margin: auto;
-    max-width: 890px;
-    word-wrap: break-word;
     color: #333;
     display: block;
-    font-size: 26px;
     font-weight: 600;
+    font-size: 26px;
     line-height: 30px;
-    margin: 1rem 1rem 0 1rem;
+    margin: 1rem auto 0;
+    max-width: 890px;
     text-transform: capitalize;
+    word-wrap: break-word;
 }
 .list_container {
     margin: 0 1rem;
@@ -28,7 +26,7 @@
     margin: auto;
     padding: 1rem;
     max-width: 890px;
-    height: 200px;
+    max-height: 240px;
     figure {
         margin: 0;
         display: flex;
@@ -69,5 +67,11 @@
                 width: 90px;
             }
         }
+    }
+}
+
+@media (max-width: 740px) {
+    .search_title {
+        padding-left: 1rem;
     }
 }

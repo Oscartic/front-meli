@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100%;
   background-color: $yellow;
-  border-bottom: 1px solid #e5d84f;;
+  border-bottom: 1px solid #e5d84f;
   display: flex;
   padding: 1rem;
   img {
@@ -46,7 +46,7 @@
     }
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 690px) {
   .search_form {
     input {
       width: 80% !important;
