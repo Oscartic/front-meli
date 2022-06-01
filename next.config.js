@@ -4,6 +4,6 @@ module.exports = {
     HOSTNAME:process.env.HOSTNAME, 
     PORT:process.env.PORT,
     HOST:process.env.HOST,
-    API_MELI_URL:  process.env.API_MELI_URL
+    API_MELI_URL:process.env.API_MELI_URL
   }
 }
