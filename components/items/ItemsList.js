@@ -30,7 +30,6 @@ const ItemsList = () => {
             setIsFetch();
             try {
                 const url = `${process.env.API_MELI_URL}/items?search=${search}`;
-                console.log(url);
                 const { data } = await axios.get(url);
                 setCategories(data.categories);
                 setProducts(data.items);
@@ -44,8 +43,6 @@ const ItemsList = () => {
         setSearch(query);
         if(search !== '') retrieveProducts(search);
     },[router.query, search]);
-
-    console.log(products);
 
     return (
         <>
