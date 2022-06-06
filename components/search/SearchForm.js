@@ -3,7 +3,6 @@ import styles from '../../styles/Search.module.scss';
 import MeliLogo from '../../public/meli.png';
 import { BsSearch } from 'react-icons/bs';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const SearchForm = () => {
