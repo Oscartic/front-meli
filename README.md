@@ -3,7 +3,7 @@
 
   &#xa0;
 
-  <!-- <a href="https://frontmeli.netlify.app">Demo</a> -->
+  <a href="https://front-meli-eight.vercel.app/">Demo TestMeli App</a>
 </div>
 
 <h1 align="center">Front Meli</h1>
@@ -26,9 +26,9 @@
 
 <!-- Status -->
 
-<h4 align="center"> 
+<!-- <h4 align="center"> 
 	🚧  Front Meli 🚀 Under construction...  🚧
-</h4> 
+</h4>  -->
 
 <hr>
 
@@ -46,23 +46,24 @@
 
 ## :dart: About ##
 
-Describe your project
+This project is a technical test for developers Meli candidates. the main requirement is connect to the Meli api for find, process and represent result in frontend using Javascript language.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Find and list seller products;\
+:heavy_check_mark: Find direct Meli idProduct;\
+:heavy_check_mark: Show details and product description;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/docs/api-reference/next/image)
+- [Axios](https://axios-http.com/docs/intro)
+
+
 
 ## :white_check_mark: Requirements ##
 
@@ -80,6 +81,12 @@ $ cd front-meli
 # Install dependencies
 $ npm install
 
+# Create an .env file with following environments 
+  HOSTNAME=localhost
+  PORT=3000
+  HOST=http://$HOSTNAME:$PORT
+  API_MELI_URL=http://localhost:5001/api/v1 (api project is required)
+
 # Run the project
 $ npm run dev
 
@@ -91,7 +98,7 @@ $ npm run dev
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/Oscartic" target="_blank">Oscartic</a>
 
 &#xa0;
 
@@ -99,35 +106,3 @@ Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" targe
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
