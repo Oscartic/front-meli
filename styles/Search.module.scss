@@ -46,6 +46,31 @@
     }
   }
 }
+.docu {
+  max-width: 1200px;
+  margin: 1rem auto;
+  text-align: center;
+  h2 {
+    font-weight: 300;
+    padding: 1rem 0;
+  }
+  h3 {
+    font-weight: 400;
+    padding: 1rem 0;
+  }
+  .arq {
+    max-width: 600px;
+    margin: auto;
+  }
+  ul {
+    list-style: none;
+    li {
+      a {
+        color: $green;
+      }
+    }
+  }
+}
 @media (max-width: 690px) {
   .search_form {
     input {
